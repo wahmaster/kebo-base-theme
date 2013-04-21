@@ -1,0 +1,22 @@
+/*
+Theme Name: Kebo Base Theme
+Theme URI: http://kebopowered.com/
+Author: Kebo
+Author http://kebopowered.com/
+Description: This is the base theme templated Kebo use to create all their WordPress sites.
+Version: 1.0
+*/
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
