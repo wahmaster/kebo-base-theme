@@ -13,9 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'kebo_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'kebo' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'kebo' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'kebo' ), 'Kebo', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering Website Owners.', 'kebo' ); ?>" rel="generator"><?php __( 'Kebo', 'kebo' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
