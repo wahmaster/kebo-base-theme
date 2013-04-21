@@ -1,0 +1,8 @@
+/*
+Custom Branding Styles for Login Page
+*/
+
+body.login div#login h1 a {
+        background-image: url('../images/login-logo.png');
+        padding-bottom: 30px;
+}
