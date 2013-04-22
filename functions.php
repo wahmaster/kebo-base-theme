@@ -64,7 +64,7 @@ if (!function_exists('kebo_setup')) :
          * If you're building a theme based on Kebo, use a find and replace
          * to change 'kebo' to the name of your theme in all the template files
          */
-        load_theme_textdomain('kebo', get_template_directory() . '/languages');
+        //load_theme_textdomain('kebo', get_template_directory() . '/languages');
 
         /**
          * Add default posts and comments RSS feed links to head
@@ -91,6 +91,7 @@ if (!function_exists('kebo_setup')) :
          */
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'kebo'),
+            'footer-links' => __('Footer Link Strip', 'kebo'),
         ));
 
         /**
@@ -161,11 +162,20 @@ add_action('widgets_init', 'kebo_widgets_init');
  */
 function kebo_scripts() {
 
-    wp_enqueue_style('Kebo-style', get_stylesheet_uri());
+    wp_enqueue_style('style', get_stylesheet_uri());
+    
+    // Queues the Theme css and less.
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/app.css', array(), '4.12', 'all');
+    
+    wp_enqueue_script('kebo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true);
 
-    wp_enqueue_script('Kebo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true);
-
-    wp_enqueue_script('Kebo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
+    wp_enqueue_script('kebo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
+    
+    // Queues the Custom Modernizr file from Foundation.
+    wp_enqueue_script('kebo-modernizr-js', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '1.2', false);
+    
+    // Main Foundation App js, must come last, starts the other plugins.
+    wp_enqueue_script('kebo-foundation-js', get_template_directory_uri() . '/js/foundation/foundation.min.js', array('jquery'), '4.12', false);
 
     // Adds Masonry to handle vertical alignment of footer widgets.
     if (is_active_sidebar('sidebar-1'))
@@ -175,7 +185,7 @@ function kebo_scripts() {
         wp_enqueue_script('comment-reply');
 
     if (is_singular() && wp_attachment_is_image())
-        wp_enqueue_script('Kebo-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20120202');
+        wp_enqueue_script('kebo-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20120202', true);
     
 }
 
