@@ -3,20 +3,6 @@ Theme Name: Kebo Base Theme
 Theme URI: http://kebopowered.com/
 Author: Kebo
 Author http://kebopowered.com/
-Description: This is the base theme templated Kebo use to create all their WordPress sites.
+Description: This is WordPress Theme built upon the _s Theme by Automattic, the Foundation 4 Framework by Zurb and uses Compass (SASS) for the CSS. It is designed to be used as a base on which to build your own Theme.
 Version: 1.0
 */
-
-/* =Infinite Scroll
------------------------------------------------ */
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
