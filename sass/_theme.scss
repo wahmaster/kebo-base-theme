@@ -2,15 +2,6 @@
  * Custom Branding Styles for the Theme
  */
 
-/* =Variables
------------------------------------------------ */
-
-$primary: #2BA6CB;
-$secondary: #333333;
-$tertiary: #333333;
-
-$test: #ffffff;
-
 /* =Global
 ----------------------------------------------- */
 
@@ -648,4 +639,54 @@ a:active {
 }
 .site-content ul {
         list-style-type: none; 
+}
+
+/* =Date Picker
+----------------------------------------------- */
+.ui-datepicker {
+        background: #fafafa;
+        border: solid 1px #ccc;
+}
+.ui-datepicker-calendar {
+        border: none;
+        margin: 0;
+}
+.ui-datepicker-calendar th {
+        font-weight: normal;
+}
+.ui-datepicker-prev {
+        width: 50%;
+        float: left;
+        display: block;
+        cursor: hand;
+        cursor: pointer;
+        padding: emCalc(8px) emCalc(4px) emCalc(0px) emCalc(8px);
+}
+.ui-datepicker-next {
+        width: 50%;
+        float: right;
+        text-align: right;
+        display: block;
+        cursor: hand;
+        cursor: pointer;
+        padding: emCalc(8px) emCalc(8px) emCalc(0px) emCalc(4px);
+}
+.ui-datepicker-calendar td {
+        text-align: center;
+        cursor: hand;
+        cursor: pointer;
+}
+.ui-datepicker-calendar td a {
+        color: #999;
+}
+.ui-datepicker-calendar td:hover {
+        background: darken(#fafafa, 5%);
+}
+.ui-datepicker-title {
+        text-align: center;
+        padding: emCalc(4px) emCalc(0px);
+}
+.ui-datepicker-title span {
+        color: $body-font-color;
+        font-size: emCalc(16px);
 }
