@@ -5,6 +5,7 @@
  *
  * @package Kebo
  */
+
 /*
  * Load Jetpack compatibility file.
  */

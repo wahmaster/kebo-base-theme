@@ -8,14 +8,15 @@
  */
 ?>
 
-	</div><!-- #main -->
+	</div><!-- #main .row -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+	<footer id="colophon" class="site-footer row" role="contentinfo">
+		<div class="site-info small-12 large-12">
 			<?php do_action( 'kebo_credits' ); ?>
 			Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering Website Owners.', 'kebo' ); ?>" rel="generator"><?php __( 'Kebo', 'kebo' ); ?></a>
-		</div><!-- .site-info -->
+		</div><!-- .site-info .small-12 .large-12 -->
 	</footer><!-- #colophon -->
+        
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

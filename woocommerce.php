@@ -13,11 +13,15 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area large-9 columns" role="main">
+<div id="primary" class="content-area small-12 large-9 columns" role="main">
+    
+    <div id="content" class="site-content" role="main">
 
-    <?php woocommerce_content(); ?>
+        <?php woocommerce_content(); ?>
+        
+    </div><!-- #content -->
 
-</div><!-- #primary .content-area -->
+</div><!-- #primary .content-area .small-12 .large-9 .columns -->
 
 <?php get_sidebar('shop'); ?>
 <?php get_footer(); ?>

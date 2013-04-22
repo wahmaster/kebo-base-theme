@@ -24,15 +24,16 @@
         </head>
 
         <body <?php body_class(); ?>>
-            <div id="page" class="hfeed site row">
+            <div id="page" class="hfeed site">
                 <?php do_action('before'); ?>
-                <header id="masthead" class="site-header" role="banner">
-                    <div class="hgroup">
+                <header id="masthead" class="site-header row" role="banner">
+                    
+                    <div class="hgroup small-12 large-12">
                         <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                         <h2 class="site-description"><?php bloginfo('description'); ?></h2>
                     </div>
 
-                    <nav id="site-navigation" class="navigation-main" role="navigation">
+                    <nav id="site-navigation" class="navigation-main  small-12 large-12" role="navigation">
                         <h1 class="menu-toggle"><?php _e('Menu', 'kebo'); ?></h1>
                         <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e('Skip to content', 'kebo'); ?>"><?php _e('Skip to content', 'kebo'); ?></a></div>
                         <?php
@@ -42,6 +43,7 @@
                         ?>
                         <?php wp_nav_menu( $menu ); ?>
                     </nav><!-- #site-navigation -->
+                    
                 </header><!-- #masthead -->
 
-                <div id="main" class="site-main">
+                <div id="main" class="site-main row">
