@@ -11,9 +11,9 @@
 	</div><!-- #main .row -->
 
 	<footer id="colophon" class="site-footer row" role="contentinfo">
-		<div class="site-info small-12 large-12">
+		<div class="site-info small-12 large-12 columns">
 			<?php do_action( 'kebo_credits' ); ?>
-			Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering Website Owners.', 'kebo' ); ?>" rel="generator"><?php __( 'Kebo', 'kebo' ); ?></a>
+			Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering People', 'kebo' ); ?>" rel="generator"><?php echo __( 'Kebo', 'kebo' ); ?></a>
 		</div><!-- .site-info .small-12 .large-12 -->
 	</footer><!-- #colophon -->
         

@@ -8,6 +8,7 @@ get_header();
 ?>
 
 <div id="primary" class="content-area image-attachment small-12 large-12 columns">
+    
     <div id="content" class="site-content" role="main">
 
         <?php while (have_posts()) : the_post(); ?>
