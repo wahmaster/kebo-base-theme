@@ -33,36 +33,22 @@ $output .= "\n<ul class=\"dropdown\">\n";
 }
 
 /*
- * You can use the code below to create a Foundation Top Bar Styled Menu
+ * You can use the code below to create a 'Normal' yet responsive, menu. Make sure navigation.js is included if so, as that powers the onclick event for opening/closing the menu.
  */
 
 /*
-<div class = "contain-to-grid">
-<nav class = "top-bar">
-<h1 class = "assistive-text"><?php _e('Menu', 'kebo');
+<nav id = "site-navigation" class = "site-navigation navigation-main small-12 large-12 columns" role = "navigation">
+<h1 class = "menu-toggle"><?php _e('Menu', 'kebo');
 ?></h1>
-<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e('Skip to content', 'kebo'); ?>"><?php _e('Skip to content', 'kebo'); ?></a></div>
-<ul class="title-area">
-    <!-- Title Area -->
-    <li class="name">
-        <h1><a href="<?php echo home_url(); ?>">KEBO</a></h1>
-        <h2><?php //bloginfo('description');  ?></h2>
-    </li>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-</ul>
-
-<section class="top-bar-section">
-
-    <!-- Right Nav Section -->
+<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e('Skip to content', 'kebo'); ?>"><?php _e('Skip to content', 'kebo'); ?></a></div>
     <?php
     $menu = array(
     'theme_location' => 'primary',
     'menu' => '',
-    'container' => '',
+    'container' => 'div',
     'container_class' => '',
     'container_id' => '',
-    'menu_class' => 'right',
+    'menu_class' => 'menu',
     'menu_id' => '',
     'echo' => true,
     'fallback_cb' => 'wp_page_menu',
@@ -70,14 +56,11 @@ $output .= "\n<ul class=\"dropdown\">\n";
     'after' => '',
     'link_before' => '',
     'link_after' => '',
-    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
     'depth' => 0,
-    'walker' => new Kebo_Walker
+    'walker' => ''
     );
     ?>
-    <?php wp_nav_menu($menu); ?>
-
-</section>
-</nav>
-</div>
+    <?php //wp_nav_menu( $menu ); ?>
+</nav><!-- #site-navigation -->
  */
