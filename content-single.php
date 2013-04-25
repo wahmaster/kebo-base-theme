@@ -20,6 +20,10 @@
         <?php the_content(); ?>
         <?php wp_link_pages(array('before' => '<div class="page-links">' . __('Pages:', 'kebo'), 'after' => '</div>')); ?>
     </div><!-- .entry-content -->
+    
+    <?php if (get_the_author_meta('description')) : ?>
+        <?php get_template_part('author-bio'); ?>
+    <?php endif; ?>
 
     <footer class="entry-meta">
         <?php
