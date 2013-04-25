@@ -102,13 +102,13 @@ get_header();
 
         <?php else : ?>
 
-            <?php get_template_part('no-results', 'archive'); ?>
+            <?php get_template_part('no-results'); ?>
 
         <?php endif; ?>
 
     </div><!-- #content .site-content -->
 
-<div><!-- #primary .small-12 .large-9 .columns -->
+</div><!-- #primary .small-12 .large-9 .columns -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
