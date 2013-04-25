@@ -1,11 +1,13 @@
 <?php
-
 /**
  * Custom Branded Admin
  *
  * @package kebo_base
  * @since kebo_base 1.0
  */
+
+/******** TO BE REMOVED *********/
+
 if (!function_exists('kebo_login_scripts')):
 
     /**
