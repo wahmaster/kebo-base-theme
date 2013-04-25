@@ -4,7 +4,6 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Kebo
  */
 get_header();
 ?>
@@ -107,7 +106,7 @@ get_header();
 
         <?php endif; ?>
 
-    </div><!-- #content -->
+    </div><!-- #content .site-content -->
 
 <div><!-- #primary .small-12 .large-9 .columns -->
 
