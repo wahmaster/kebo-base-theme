@@ -209,7 +209,7 @@ function kebo_scripts() {
     wp_enqueue_script('kebo-modernizr-js', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '1.2', false);
     
     // Main Foundation App js, must come last, starts the other plugins.
-    wp_enqueue_script('kebo-foundation-js', get_template_directory_uri() . '/js/foundation/foundation.min.js', array('jquery'), '4.12', false);
+    wp_enqueue_script('kebo-foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '4.12', false);
 
     // Adds Masonry to handle vertical alignment of footer widgets.
     if (is_active_sidebar('sidebar-1'))
