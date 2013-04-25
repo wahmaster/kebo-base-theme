@@ -174,7 +174,7 @@ body.woocommerce #content {
 
 }
 .site-main {
-        
+        margin-top: remCalc(20px);
 }
 #primary {
     
@@ -191,6 +191,7 @@ hgroup {
 
 /* =Footer
 ----------------------------------------------- */
+
 .site-footer {
         
 }
@@ -206,14 +207,8 @@ hgroup {
 
 /* =Front Page
 ----------------------------------------------- */
-#home-page-widgetarea {
-        float: left;
-        width: 100%;
-}
-#home-page-widgetarea .front-widgets {
-        width: 32.5%;
-        float: left;
-}
+
+
 
 /* =Menu
 ----------------------------------------------- */
@@ -320,10 +315,15 @@ hgroup {
 
 /* =Blog
 ----------------------------------------------- */
+
 .page-title .vcard {
         border: none;
         padding: 0;
         margin: 0;
+}
+body.blog article.type-post {
+        padding-bottom: remCalc(20px);
+        border-bottom: 1px dashed #ddd;
 }
 article .vcard {
         border: none;
@@ -337,19 +337,29 @@ article .vcard a.fn {
 footer.entry-meta {
         padding-top: remCalc(10px);
 }
+.entry-content .page-links {
+}
+.entry-content .page-links a {
+}
 
 /* =Search Form
 ----------------------------------------------- */
+
 .searchform {
         overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 3px;
 }
 .searchform .field {
         line-height: 1.5em;
         height: auto;
         padding: remCalc(5px) remCalc(10px);
+        border: none;
+        margin-bottom: 0;
 }
 .searchform .submit {
         display: none;
+        text-indent: -9999px;
 }
 
 /* =Content
@@ -385,6 +395,19 @@ footer.entry-meta {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+/* =Custom Elements
+----------------------------------------------- */
+
+pre {
+        font-size: remCalc(14px);
+}
+.label a {
+        color: #fff;
+}
+.label a:hover {
+        text-decoration: underline;
 }
 
 /* =Media
@@ -495,7 +518,21 @@ object {
 
 /* =Pagination
 ----------------------------------------------- */
-
+.pagination {
+    
+}
+.pagination a.page-numbers,
+.pagination span.page-numbers {
+        display: inline;
+        padding: remCalc(3px) remCalc(7px);
+        border-radius: $global-radius;
+        @include gradient-single(#ffffff);
+        border: 1px solid #ccc;
+        color: $primary-color;
+}
+.pagination .page-numbers.current {
+        color: #aaa;
+}
 
 /* =Comments
 ----------------------------------------------- */
@@ -505,10 +542,11 @@ object {
         margin-bottom: 5px;
         border: none;
 }
-ol.commentlist {
+ol.comment-list {
         margin-left: 1.5em;
+        list-style: none;
 }
-ol.commentlist article.comment {
+ol.comment-list article.comment {
         padding: 20px;
         list-style: none;
         border: 1px solid #ddd;
@@ -517,12 +555,12 @@ ol.commentlist article.comment {
         position: relative;
         overflow: hidden;
 }
-#main ol.commentlist li {
+ol.comment-list li.comment {
         list-style: none;
         background: none;
         padding: 0;
 }
-ol.commentlist ul.children {
+ol.comment-list ul.children {
         margin-left: 0;
         padding-left: 1.5em;
         border-left: 1px solid #ddd;
@@ -532,9 +570,14 @@ article.comment .comment-author {
         float: left;
         margin-bottom: 7px;
 }
+.comment-author .says {
+        margin-left: 5px;
+        padding-bottom: 3px;
+        float: left;
+}
 article.comment .comment-author img {
         float: left;
-        display: none; /* Remove to Display Avatars on Comments */
+        margin-right: 10px;
 }
 article.comment .comment-author cite {
         float: left;
@@ -587,13 +630,24 @@ article.comment .reply a:hover {
 h3#reply-title {
         font-weight: bold;
 }
+p.form-allowed-tags {
+        width: auto;
+}
 .comment-form-comment textarea {
-        min-height: 80px;
+        min-height: 160px;
         width: 100%;
 }
-.comment-form-comment textarea:focus {
-        min-height: 260px;
+#commentform #submit {
+        padding: remCalc(4px) remCalc(8px);
+        @include gradient-single(#ffffff);
+        border: 1px solid #ccc;
+        color: $primary-color;
+        border-radius: $global-radius;
 }
+#commentform #submit:hover {
+        background: darken(#fff, 10%);
+}
+
 /* =Widgets
 ----------------------------------------------- */
 
@@ -610,26 +664,6 @@ h3#reply-title {
 
 .widget ul li {
 
-}
-
-/* Search widget */
-form#searchform {
-        border: 1px solid #ccc;
-        border-radius: 3px;
-}
-form#searchform input#s {
-        border: none;
-        
-        margin-bottom: 0;
-}
-#searchsubmit {
-	padding: 0;
-        height: 26px;
-        width: 11%;
-        border: none;
-        background: none;
-        text-indent: -9999px;
-        float: right;
 }
 
 /* Calendar widget */
@@ -751,6 +785,19 @@ a:active {
 
 .screen-reader-text {
         display: none;
+}
+
+/* =bbPress  Compatability
+----------------------------------------------- */
+
+.bbp-search-form {
+        width: 240px;
+}
+.bbp-search-form #bbp_search {
+}
+.bbp-search-form #bbp_search_submit {
+        padding-top: remCalc(6px);
+        padding-bottom: remCalc(6px);
 }
 
 /* =Infinite Scroll
