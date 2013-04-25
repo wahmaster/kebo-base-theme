@@ -289,7 +289,7 @@ hgroup {
         background: darken($small-menu-color, 5%);
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: $small-screen) {
     
     .menu-toggle,
     .main-small-navigation ul.nav-menu.toggled-on {
@@ -310,7 +310,20 @@ hgroup {
     .site-navigation ul {
         margin: 0;
     }
+    nav.top-bar {
+        margin-bottom: 0;
+    }
     
+}
+
+/* Top Bar Compatibility */
+
+.top-bar-section .dropdown li a {
+        line-height: 1em;
+        height: auto;
+}
+.top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+        margin-top: -17px;
 }
 
 /* =Blog
@@ -325,6 +338,10 @@ body.blog article.type-post,
 body.archive article.type-post {
         padding-bottom: remCalc(20px);
         border-bottom: 1px dashed #ddd;
+        position: static;
+}
+#primary {
+        overflow: hidden;
 }
 article .vcard {
         border: none;
@@ -371,6 +388,7 @@ footer.entry-meta {
 .author-info .author-title {
         clear: none;
         margin-top: 0;
+        margin-bottom: remCalc(5px);
 }
 .author-info .author-bio {
         margin: 0;
@@ -766,6 +784,7 @@ a:active {
 
 /* =Date Picker
 ----------------------------------------------- */
+
 .ui-datepicker {
         background: #fafafa;
         border: solid 1px #ccc;
