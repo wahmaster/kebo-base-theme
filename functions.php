@@ -155,7 +155,7 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Sidebar - Shop', 'kebo_base'),
+        'name' => __('Sidebar - Shop', 'kebo'),
         'id' => 'sidebar-2',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
@@ -163,7 +163,7 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Footer Left', 'kebo_base'),
+        'name' => __('Footer - Left', 'kebo'),
         'id' => 'sidebar-3',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
@@ -171,7 +171,7 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Footer Center', 'kebo_base'),
+        'name' => __('Footer - Center', 'kebo'),
         'id' => 'sidebar-4',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
@@ -179,8 +179,16 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Footer Right', 'kebo_base'),
+        'name' => __('Footer - Right', 'kebo'),
         'id' => 'sidebar-5',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => __('Sidebar - Forum', 'kebo'),
+        'id' => 'sidebar-6',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h1 class="widget-title">',
