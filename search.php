@@ -10,8 +10,12 @@ get_header();
 <div id="primary" class="content-area small-12 large-9 columns">
     
     <div id="content" class="site-content" role="main">
-
-        <?php if (have_posts()) : ?>
+        
+        <?php if (' ' == get_search_query()) : ?>
+        
+            <?php get_template_part('no-results', 'search'); ?>
+        
+        <?php elseif (have_posts()) : ?>
 
             <header class="page-header">
                 
