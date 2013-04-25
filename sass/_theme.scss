@@ -321,7 +321,8 @@ hgroup {
         padding: 0;
         margin: 0;
 }
-body.blog article.type-post {
+body.blog article.type-post,
+body.archive article.type-post {
         padding-bottom: remCalc(20px);
         border-bottom: 1px dashed #ddd;
 }
@@ -334,12 +335,45 @@ article .vcard {
 article .vcard a.fn {
         font-weight: normal;
 }
+article .entry-title {
+        margin-top: 0;
+}
 footer.entry-meta {
         padding-top: remCalc(10px);
 }
 .entry-content .page-links {
 }
 .entry-content .page-links a {
+}
+
+/* =Author Archive Page
+----------------------------------------------- */
+
+.archive-title .vcard {
+        border: none;
+        display: inline;
+        padding: 0;
+        margin: 0;
+}
+
+/* =Author Bio
+----------------------------------------------- */
+
+.author-info {
+        border: 1px solid #ccc;
+        padding: remCalc(10px);
+        margin-bottom: remCalc(20px);
+}
+.author-info .author-avatar {
+        float: left;
+        margin-right: 10px;
+}
+.author-info .author-title {
+        clear: none;
+        margin-top: 0;
+}
+.author-info .author-bio {
+        margin: 0;
 }
 
 /* =Search Form
