@@ -1,14 +1,10 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying WooCommerce pages.
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * This wraps the WooCommerce forum code and uses a different
+ * sidebar so that users can have a custom WooCommerce sidebar.
  *
- * @package kebo_base
- * @since kebo_base 1.0
  */
 get_header();
 ?>
