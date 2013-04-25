@@ -31,11 +31,6 @@ if (!function_exists('kebo_setup')) :
          * template files.
          */
         load_theme_textdomain('kebo', get_template_directory() . '/languages');
-        
-        /**
-         * Custom Kebo Framework files.
-         */
-        require( get_template_directory() . '/inc/kebo/kebo.php' );
 
         /**
          * Custom Kebo Framework files.
@@ -150,6 +145,7 @@ add_action('after_setup_theme', 'kebo_register_custom_background');
  * Register widgetized area and update sidebar with default widgets
  */
 function kebo_widgets_init() {
+    
     register_sidebar(array(
         'name' => __('Sidebar', 'kebo'),
         'id' => 'sidebar-1',
@@ -158,6 +154,39 @@ function kebo_widgets_init() {
         'before_title' => '<h1 class="widget-title">',
         'after_title' => '</h1>',
     ));
+    register_sidebar(array(
+        'name' => __('Sidebar - Shop', 'kebo_base'),
+        'id' => 'sidebar-2',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => __('Footer Left', 'kebo_base'),
+        'id' => 'sidebar-3',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => __('Footer Center', 'kebo_base'),
+        'id' => 'sidebar-4',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => __('Footer Right', 'kebo_base'),
+        'id' => 'sidebar-5',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    
 }
 
 add_action('widgets_init', 'kebo_widgets_init');
@@ -195,6 +224,59 @@ function kebo_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'kebo_scripts');
+
+/*
+ * Add the Foundation init JS to Footer.
+ */
+function kebo_insert_foundation_js() {
+    
+    echo '
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(document).foundation(function (response) {
+                    console.log(response.errors);
+                });
+            });
+        </script>
+        ';
+    
+}
+add_action('wp_footer', 'kebo_insert_foundation_js');
+
+/**
+ * Change the Excerpt output.
+ */
+function kebo_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'kebo_excerpt_more');
+
+/**
+ * Sends blank searches to Search Page instead of Home Page.
+ */
+function kebo_empty_search_fix($query_vars) {
+    if (isset($_GET['s']) && empty($_GET['s'])) {
+        $query_vars['s'] = " ";
+    }
+    return $query_vars;
+}
+add_filter('request', 'kebo_empty_search_fix');
+
+/**
+ * Change buttons in WYSWIG post editor, edit color palette
+ * 
+ * Only use this if you want to limit the set color choices in the editor.
+ */
+/*
+function kebo_editor_color_filter($init) {
+    $default_colours = '000000,993300,333300,003300,003366,000080,333399,333333,800000,FF6600,808000,008000,008080,0000FF,666699,808080,FF0000,FF9900,99CC00,339966,33CCCC,3366FF,800080,999999,FF00FF,FFCC00,FFFF00,00FF00,00FFFF,00CCFF,993366,C0C0C0,FF99CC,FFCC99,FFFF99,CCFFCC,CCFFFF,99CCFF,CC99FF,FFFFFF';
+    $custom_colours = 'FF00FF,FFFF00,000000';
+    $init['theme_advanced_text_colors'] = $default_colours . ',' . $custom_colours;
+    $init['theme_advanced_more_colors'] = true;
+    return $init;
+}
+add_filter('tiny_mce_before_init', 'kebo_editor_color_filter');
+ */
 
 /**
  * Implement the Custom Header feature
