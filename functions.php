@@ -31,6 +31,11 @@ if (!function_exists('kebo_setup')) :
          * template files.
          */
         load_theme_textdomain('kebo', get_template_directory() . '/languages');
+        
+        /**
+         * Custom Kebo Framework files.
+         */
+        require( get_template_directory() . '/inc/kebo/kebo.php' );
 
         /**
          * Custom Kebo Framework files.
