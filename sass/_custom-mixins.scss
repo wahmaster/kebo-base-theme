@@ -28,7 +28,7 @@
     
 }
 
-@mixin gradient-single($from) {
+@mixin gradient-single($from: #fff) {
     
     /* fallback/image non-cover color */
     background-color: $from;

@@ -2,6 +2,7 @@
 
 // This is the default html and body font-size for the base em value.
 $em-base: 14px;
+$base-font-size: 14px; // Fix for Foundation 4.0.9+ which reverted back to old variable
 
 // We use these to control various global styles
 $body-font-color: #222;
@@ -10,6 +11,9 @@ $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // Theme Specific Variables
 $primary-color: #2ba6cb;
 $secondary-color: #ccc;
+
+// Menu Color
+$small-menu-color: #666;
 
 // Social Color Variables
 $facebook: #3b5998;
