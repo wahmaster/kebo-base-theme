@@ -50,7 +50,7 @@ get_header();
             <?php kebo_content_nav(); ?>
 
         <?php else : ?>
-            <?php get_template_part('content', 'none'); ?>
+            <?php get_template_part('no-results'); ?>
         <?php endif; ?>
 
     </div><!-- #content .site-content -->
