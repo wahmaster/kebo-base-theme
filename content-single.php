@@ -57,4 +57,4 @@
         <?php edit_post_link(__('Edit', 'kebo'), '<span class="edit-link">', '</span>'); ?>
     </footer><!-- .entry-meta -->
     
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->
