@@ -47,7 +47,7 @@ get_header();
                 <?php get_template_part('content', get_post_format()); ?>
             <?php endwhile; ?>
 
-            <?php kebo_content_nav(); ?>
+            <?php kebo_content_nav('nav-below'); ?>
 
         <?php else : ?>
             <?php get_template_part('no-results'); ?>
