@@ -4,6 +4,9 @@
 $em-base: 14px;
 $base-font-size: 14px; // Fix for Foundation 4.0.9+ which reverted back to old variable
 
+// Max Width of the Site.
+$row-width: 62.5em;
+
 // We use these to control various global styles
 $body-font-color: #222;
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
