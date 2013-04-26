@@ -1,4 +1,6 @@
-# README-README: A Style Guide for README files
+# README-README: Kebo Base
+
+Hi, I am a combination (and more!) of two fantastic products which make creating websites easier. I am a WordPress Theme designed to give you a headstart when making your own theme. I am built upon the [_s] (https://github.com/Automattic/_s/) Theme created by [Automattic](http://automattic.com/)
 
 ## Contents
 
