@@ -589,20 +589,14 @@ object {
 /* =Comments
 ----------------------------------------------- */
 
-#main .comments-title {
-        font-size: 1.2em;
-        margin-bottom: 5px;
-        border: none;
-}
 ol.comment-list {
         margin-left: 1.5em;
         list-style: none;
 }
 ol.comment-list article.comment {
-        padding: 20px;
+        padding: remCalc(10px) 0;
         list-style: none;
-        border: 1px solid #ddd;
-        border-radius: 3px;
+        border-top: 1px solid #ddd;
         margin-bottom: 10px;
         position: relative;
         overflow: hidden;
@@ -614,90 +608,33 @@ ol.comment-list li.comment {
 }
 ol.comment-list ul.children {
         margin-left: 0;
-        padding-left: 1.5em;
-        border-left: 1px solid #ddd;
-}
-article.comment .comment-author {
-        width: 100%;
-        float: left;
-        margin-bottom: 7px;
-}
-.comment-author .says {
-        margin-left: 5px;
-        padding-bottom: 3px;
-        float: left;
-}
-article.comment .comment-author img {
-        float: left;
-        margin-right: 10px;
-}
-article.comment .comment-author cite {
-        float: left;
-        font-style: normal;
-        font-weight: bold;
-        margin-top: -3px;
+        padding-left: remCalc(40px);
 }
 article.comment .comment-meta {
-        position: absolute;
-        bottom: 10px;
-        left: 20px;
+        display: block;
 }
-article.comment .comment-meta a {
-        color: #444;
-        font-size: 0.9em;
-}
-.comment-meta a.comment-edit-link {
-        margin-left: 10px;
-        text-decoration: none;
-}
-.comment-meta a.comment-edit-link:hover {
-        color: #000;
-}
-article.comment .comment-content {
-        width: 100%;
+article.comment .comment-meta img {
         float: left;
+        margin-right: remCalc(10px);
 }
-article.comment .comment-content p {
-        margin-bottom: 20px;
+article.comment .comment-meta .comment-author {
+        font-size: remCalc(14px);
+        font-style: normal;
+        float: none;
+        margin-right: remCalc(10px);
+}
+article.comment .comment-meta time {
+        margin-right: remCalc(10px);
+}
+article.comment .comment-meta a.comment-id {
+        float: right;
 }
 article.comment .reply {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        border-left: 1px solid #ddd;
-        border-top: 1px solid #ddd;
-}
-article.comment .reply a {
-        font-size: 1em;
-        color: #444;
-        padding: 4px 8px;
-        text-decoration: none;
-}
-article.comment .reply a:hover {
-        background: #efefef;
-}
-.form-allowed-tags {
-        font-size: 0.95em;
-}
-h3#reply-title {
-        font-weight: bold;
-}
-p.form-allowed-tags {
-        width: auto;
+        float: right;
 }
 .comment-form-comment textarea {
-        min-height: 160px;
         width: 100%;
-}
-#commentform #submit {
-        padding: remCalc(4px) remCalc(8px);
-        @include gradient-single(#ffffff);
-        border: 1px solid #ccc;
-        color: $primary-color;
-        border-radius: $global-radius;
-}
-#commentform #submit:hover {
-        background: darken(#fff, 10%);
+        min-height: 80px;
 }
 
 /* =Widgets
