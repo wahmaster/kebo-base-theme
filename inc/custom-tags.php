@@ -51,14 +51,14 @@ if (!function_exists('kebo_comment_pagination')):
     /**
      * Displays pagination on comments
      */
-    function kebo_comment_pagination($nav_class) {
+    function kebo_comment_pagination($nav_class = '') {
 
         //read the page links but do not echo
         $comment_page = paginate_comments_links('echo=0');
-
+        
         //if there are page links, echo the navigation div and the page links
         if (!empty($comment_page)) {
-            echo "<div class=\"page_nav comments_nav $nav_class\">\n";
+            echo "<div class=\"pagination pagination-centered $nav_class\">\n";
             echo paginate_comments_links(array(
                 'base' => add_query_arg('cpage', '%#%'),
                 'format' => '',
