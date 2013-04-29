@@ -326,6 +326,13 @@ hgroup {
         margin-top: -17px;
 }
 
+/* Inline Footer Credits Menu */
+
+ul.inline-list {
+        display: inline-block;
+        margin: 0 0 remCalc(5px) 0;
+}
+
 /* =Blog
 ----------------------------------------------- */
 
@@ -591,6 +598,13 @@ object {
 .pagination .page-numbers.current:hover {
         background: $primary-color;
         cursor: default;
+}
+
+.page-links {
+        text-align: center;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: remCalc(5px) 0;
 }
 
 /* =Comments
