@@ -7,7 +7,6 @@
  * handled by a callback to kebo_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package Kebo
  */
 ?>
 
