@@ -1,4 +1,4 @@
-# TODO-TODO: A to-do list for the Kebo Base Theme
+# A to-do list for the Kebo Base Theme
 
 * Add Contact Form 7 styling for validation messages.
 

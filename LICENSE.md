@@ -1,1 +1,1 @@
-# LICENSE-LICENSE: The license used for the Kebo base Theme
+# The license used for the Kebo base Theme
