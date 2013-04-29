@@ -16,10 +16,9 @@ This combination results in a very clean, well structured Theme, with an integra
 
 ## Getting Started
 
-* **Design Goals**
-- You first need a working WordPress install in which to install this theme.
-- Then copy the `kebo_base_theme` folder into your `/wp-content/themes/` folder.
-- Login to your WordPress site then go to Appearance --> Themes, click activate.
+* You first need a working WordPress install in which to install this theme.
+* Then copy the `kebo_base_theme` folder into your `/wp-content/themes/` folder.
+* Login to your WordPress site then go to Appearance --> Themes, click activate.
 
 * **Design Goals**
   - lightweight or full-featured?
