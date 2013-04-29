@@ -32,7 +32,7 @@ get_header();
 
             <?php endwhile; ?>
 
-            <?php kebo_content_nav('nav-below'); ?>
+            <?php kebo_pagination_nav('nav-below pagination'); ?>
 
         <?php else : ?>
 
