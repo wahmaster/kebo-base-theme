@@ -94,7 +94,7 @@ if (!function_exists('kebo_setup')) :
          */
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'kebo'),
-            'footer-links' => __('Footer Link Strip', 'kebo'),
+            'footer-credits' => __('Footer Credits', 'kebo'),
         ));
 
         /**
