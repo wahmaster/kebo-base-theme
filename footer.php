@@ -20,8 +20,17 @@
             
             <div class="site-info small-12 large-12 columns">
                     
-                    <?php do_action( 'kebo_credits' ); ?>
-                    Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering People', 'kebo' ); ?>" rel="generator"><?php echo __( 'Kebo', 'kebo' ); ?></a>
+                <?php $args = array(
+                    'theme_location' => 'footer_credits',
+                    'menu_class' => 'inline-list centered',
+                    'echo' => true,
+                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                    'depth' => 0,
+                ); ?>
+                <?php wp_nav_menu($args); ?>
+                
+                Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering People', 'kebo' ); ?>" rel="generator"><?php echo __( 'Kebo', 'kebo' ); ?></a>
+                <?php do_action( 'kebo_credits' ); ?>
 		
             </div><!-- .site-info .small-12 .large-12 -->
             
