@@ -4,7 +4,7 @@ Hi, I am a starter theme allowing you to easily create WordPress themes using th
 
 I am a combination of two fantastic products which make creating websites easier. I am built upon the [_s] (https://github.com/Automattic/_s/) Theme created by [Automattic](http://automattic.com/) and the [Foundation 4 Framework] (https://github.com/zurb/foundation) created by [Zurb] (http://zurb.com/).
 
-If you are a Theme Developer or would like to create your own WordPress theme I could hsave you a lot of time. Have a look at me in action on my [Demo Site]. (http://demo.kebopowered.com/base/)
+If you are a Theme Developer or would like to create your own WordPress theme I could hsave you a lot of time. Have a look at me in action on my [Demo Site] (http://demo.kebopowered.com/base/).
 
 This combination results in a very clean, well structured Theme, with an integrated Responsive Framework and a package of UI goodies ready for use. These include:
 
