@@ -571,19 +571,26 @@ object {
 /* =Pagination
 ----------------------------------------------- */
 .pagination {
-    
 }
 .pagination a.page-numbers,
 .pagination span.page-numbers {
         display: inline;
         padding: remCalc(3px) remCalc(7px);
-        border-radius: $global-radius;
-        @include gradient-single(#ffffff);
-        border: 1px solid #ccc;
-        color: $primary-color;
+        background: #fff;
+        color: #999;
+}
+.pagination a.page-numbers:hover,
+.pagination span.page-numbers:hover {
+        background: #e6e6e6;
 }
 .pagination .page-numbers.current {
-        color: #aaa;
+        color: #fff;
+        font-weight: bold;
+        background: $primary-color;
+}
+.pagination .page-numbers.current:hover {
+        background: $primary-color;
+        cursor: default;
 }
 
 /* =Comments
