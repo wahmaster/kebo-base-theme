@@ -35,8 +35,7 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="navigation-comment" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'kebo' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'kebo' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'kebo' ) ); ?></div>
+			<?php kebo_comment_pagination(); ?>
 		</nav><!-- #comment-nav-before -->
 		<?php endif; // check for comment navigation ?>
 
@@ -55,8 +54,7 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation-comment" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'kebo' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'kebo' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'kebo' ) ); ?></div>
+			<?php kebo_comment_pagination(); ?>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
