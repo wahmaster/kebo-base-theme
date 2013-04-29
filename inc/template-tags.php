@@ -91,7 +91,8 @@ if (!function_exists('kebo_comment')) :
                             <div class="comment-meta commentmetadata">
                                 <a href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>">
                                     <time datetime="<?php comment_time('c'); ?>">
-                                        <?php printf(_x('%1$s at %2$s', '1: date, 2: time', 'kebo'), get_comment_date(), get_comment_time()); ?>
+                                        <?php echo kebo_time_ago( get_comment_date('G') ); ?>
+                                        <?php //printf(_x('%1$s at %2$s', '1: date, 2: time', 'kebo'), get_comment_date(), get_comment_time()); ?>
                                     </time>
                                 </a>
                                 <?php edit_comment_link(__('Edit', 'kebo'), '<span class="edit-link">', '<span>'); ?>
