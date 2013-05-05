@@ -5,10 +5,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    
-    <div class="entry-media">
-        <?php the_post_format_video(); ?>
-    </div><!-- .entry-media -->
 
     <header class="entry-header">
         
@@ -27,6 +23,10 @@
     </header><!-- .entry-header -->
 
     <div class="entry-content">
+        
+        <div class="entry-media flex-video">
+            <?php the_post_format_video(); ?>
+        </div><!-- .entry-media -->
         
         <?php the_remaining_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'kebo')); ?>
         <?php wp_link_pages(array('before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'kebo') . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>')); ?>
