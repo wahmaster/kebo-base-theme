@@ -9,12 +9,12 @@
     <header class="entry-header">
         
         <h1 class="entry-title">
-            <a href="<?php echo esc_url(twentythirteen_get_link_url()); ?>"><?php the_title(); ?></a>
+            <a href="<?php echo esc_url(kebo_get_link_url()); ?>"><?php the_title(); ?></a>
         </h1>
 
         <div class="entry-meta">
             
-            <?php twentythirteen_entry_date(); ?>
+            <?php kebo_entry_date(); ?>
             <?php edit_post_link(__('Edit', 'kebo'), '<span class="edit-link">', '</span>'); ?>
             
         </div><!-- .entry-meta -->
