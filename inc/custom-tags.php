@@ -55,7 +55,7 @@ if (!function_exists('kebo_comment_pagination')):
 
         //read the page links but do not echo
         $comment_page = paginate_comments_links('echo=0');
-
+        
         //if there are page links, echo the navigation div and the page links
         if (!empty($comment_page)) {
             echo "<div class=\"pagination pagination-centered $nav_class\">\n";
@@ -71,6 +71,7 @@ if (!function_exists('kebo_comment_pagination')):
     }
 
 endif; // kebo_comment_pagination
+
 // Custom Menu Walker for Foundation v4 Top Bar Compatibility
 class Kebo_Walker extends Walker_Nav_Menu {
 
@@ -194,91 +195,6 @@ if (!function_exists('kebo_time_ago')) :
         return $output;
     }
 
-endif;
 
-if (!function_exists('twentythirteen_entry_meta')) :
-
-    /**
-     * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
-     *
-     * Create your own twentythirteen_entry_meta() to override in a child theme.
-     *
-     * @since Twenty Thirteen 1.0
-     *
-     * @return void
-     */
-    function twentythirteen_entry_meta() {
-        if (is_sticky() && is_home() && !is_paged())
-            echo '<span class="featured-post">' . __('Sticky', 'twentythirteen') . '</span>';
-
-        if (!has_post_format('link') && 'post' == get_post_type())
-            twentythirteen_entry_date();
-
-// Translators: used between list items, there is a space after the comma.
-        $categories_list = get_the_category_list(__(', ', 'twentythirteen'));
-        if ($categories_list) {
-            echo '<span class="categories-links">' . $categories_list . '</span>';
-        }
-
-// Translators: used between list items, there is a space after the comma.
-        $tag_list = get_the_tag_list('', __(', ', 'twentythirteen'));
-        if ($tag_list) {
-            echo '<span class="tags-links">' . $tag_list . '</span>';
-        }
-
-// Post author
-        if ('post' == get_post_type()) {
-            printf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', esc_url(get_author_posts_url(get_the_author_meta('ID'))), esc_attr(sprintf(__('View all posts by %s', 'twentythirteen'), get_the_author())), get_the_author()
-            );
-        }
-    }
 
 endif;
-
-if (!function_exists('kebo_entry_date')) :
-
-    /**
-     * Prints HTML with date information for current post.
-     *
-     * Create your own twentythirteen_entry_date() to override in a child theme.
-     */
-    function kebo_entry_date($echo = true) {
-        $format_prefix = ( has_post_format('chat') || has_post_format('status') ) ? _x('%1$s on %2$s', '1: post format name. 2: date', 'kebo') : '%2$s';
-
-        $date = sprintf('<span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>', esc_url(get_permalink()), esc_attr(sprintf(__('Permalink to %s', 'kebo'), the_title_attribute('echo=0'))), esc_attr(get_the_date('c')), esc_html(sprintf($format_prefix, get_post_format_string(get_post_format()), get_the_date()))
-        );
-
-        if ($echo)
-            echo $date;
-
-        return $date;
-    }
-
-endif;
-
-/**
- * Returns the URL from the post.
- *
- * @uses get_the_link() to get the URL in the post meta (if it exists) or
- * the first link found in the post content.
- *
- * Falls back to the post permalink if no URL is found in the post.
- *
- */
-function kebo_get_link_url() {
-    $has_url = get_the_post_format_url();
-
-    return ( $has_url ) ? $has_url : apply_filters('the_permalink', get_permalink());
-}
-
-/**
- * Sets the image size in featured galleries to large.
- */
-function kebo_gallery_atts($atts) {
-    if (has_post_format('gallery') && !is_single())
-        $atts['size'] = 'large';
-
-    return $atts;
-}
-
-add_filter('shortcode_atts_gallery', 'kebo_gallery_atts');

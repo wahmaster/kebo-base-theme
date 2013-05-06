@@ -74,18 +74,20 @@ if (!function_exists('kebo_setup')) :
         add_theme_support('automatic-feed-links');
 
         /*
-	 * This theme supports all available post formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 *
-	 * Structured post formats are formats where Twenty Thirteen handles the
-	 * output instead of the default core HTML output.
-	 */
-	add_theme_support( 'structured-post-formats', array(
-		'link', 'video'
-	) );
-	add_theme_support( 'post-formats', array(
-		'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
-	) );
+         * This theme supports all available post formats.
+         * See http://codex.wordpress.org/Post_Formats
+         *
+         * Structured post formats are formats where Twenty Thirteen handles the
+         * output instead of the default core HTML output.
+         */
+        // Un-comment for WP 3.6 release
+        //add_theme_support('structured-post-formats', array(
+        //'link', 'video'
+        //));
+        
+        add_theme_support('post-formats', array(
+            'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
+        ));
 
         /**
          * This theme uses wp_nav_menu() in one location.
