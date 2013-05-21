@@ -1,33 +1,22 @@
 <?php
 /**
- * Template Name: Front Page Template
- *
- * Description: A page template that provides a key component of WordPress as a CMS
- * by meeting the need for a carefully crafted introductory page. The front page template
- * in Twenty Twelve consists of a page content area for adding text, images, video --
- * anything you’d like -- followed by front-page-only widgets in one or two columns.
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * Template Name: Home Page Template
  */
+get_header();
+?>
 
-get_header(); ?>
+<div id="primary" class="content-area small-12 large-12 columns" role="main">
 
-	<div id="primary" class="content-area twelve columns" role="main">
-                    
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="entry-page-image">
-						<?php the_post_thumbnail(); ?>
-					</div><!-- .entry-page-image -->
-				<?php endif; ?>
+    <?php while (have_posts()) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+        <?php the_content(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+        <?php get_sidebar('front'); ?>
+    
+        <?php edit_post_link(__('Edit', 'kebo'), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>'); ?>
 
-	</div><!-- #primary -->
+    <?php endwhile; // end of the loop. ?>
 
-<?php get_sidebar( 'front' ); ?>
+</div><!-- #primary .content-area .small-12 .large-12 .columns -->
+
 <?php get_footer(); ?>
