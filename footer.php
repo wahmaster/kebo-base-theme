@@ -16,6 +16,10 @@
                 
                 <?php if (!is_404()) { get_sidebar('footer'); } ?>
                 
+            </div>
+            
+            <div class="site-info small-12 large-12 columns">
+                    
                 <?php $args = array(
                     'theme_location' => 'footer_credits',
                     'menu_class' => 'inline-list centered',
@@ -25,13 +29,7 @@
                 ); ?>
                 <?php wp_nav_menu($args); ?>
                 
-            </div>
-            
-            <div class="site-info small-12 large-12 columns">
-                
-                Copyright &copy; <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                <span class="divider"> | </span>
-                Powered by <a title="<?php esc_attr_e( 'Kebo - WordPress Experts', 'kebo' ); ?>" href="http://kebopowered.com/?utm_source=site_footer&utm_content=<?php echo wp_get_theme()->template; ?>" rel="generator" target="_blank">Kebo</a>
+                Powered by <a href="http://kebopowered.com/" title="<?php esc_attr_e( 'Kebo - Empowering People', 'kebo' ); ?>" rel="generator"><?php echo __( 'Kebo', 'kebo' ); ?></a>
                 <?php do_action( 'kebo_credits' ); ?>
 		
             </div><!-- .site-info .small-12 .large-12 -->

@@ -1,13 +1,13 @@
 <?php
 /**
  * Template Name: Content-Sidebar Page Template
+ *
+ * @since kebo_base 1.0
  */
 get_header();
 ?>
 
-<div id="primary" class="content-area small-12 large-9 columns">
-    
-    <div id="content" class="site-content" role="main">
+<div id="primary" class="content-area large-9 columns" role="main">
 
         <?php while (have_posts()) : the_post(); ?>
 
@@ -17,9 +17,7 @@ get_header();
 
         <?php endwhile; // end of the loop. ?>
 
-    </div><!-- #content -->
-    
-</div><!-- #primary .small-12 .large-9 .columns -->
+</div><!-- #primary .content-area -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

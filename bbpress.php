@@ -1,8 +1,10 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * Template file for displaying the bbPress plugin pages.
  *
- * @package Kebo
+ * This wraps the bbPress forum code and uses a different
+ * sidebar so that users can have a custom forum sidebar.
+ *
  */
 get_header();
 ?>
@@ -13,9 +15,7 @@ get_header();
 
         <?php while (have_posts()) : the_post(); ?>
 
-            <?php get_template_part('content', 'single'); ?>
-
-            <?php kebo_content_nav('nav-below'); ?>
+            <?php get_template_part('content', 'page'); ?>
 
             <?php
             // If comments are open or we have at least one comment, load up the comment template
@@ -29,5 +29,5 @@ get_header();
     
 </div><!-- #primary .small-12 .large-9 .columns -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('forum'); ?>
 <?php get_footer(); ?>

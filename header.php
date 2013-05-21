@@ -34,7 +34,9 @@
                         <ul class="title-area">
                             <!-- Title Area -->
                             <li class="name">
+
                                 <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php the_title(); ?></a></h1>
+
                                 <h2><?php //bloginfo('description'); ?></h2>
                             </li>
                             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
