@@ -12,7 +12,7 @@ get_header();
     
     <div id="content" class="site-content" role="main">
 
-        <?php if (have_posts()) : ?>
+        <?php if ( have_posts() ) : ?>
 
             <?php
             /* Queue the first post, that way we know
@@ -26,7 +26,7 @@ get_header();
 
             <header class="archive-header">
                 <h1 class="archive-title">
-                    <?php printf(__('All posts by %s', 'twentythirteen'), '<span class="vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="' . esc_attr(get_the_author()) . '" rel="me">' . get_the_author() . '</a></span>'); ?>
+                    <?php printf(__('All posts by %s', 'kebo'), '<span class="vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="' . esc_attr(get_the_author()) . '" rel="me">' . get_the_author() . '</a></span>'); ?>
                 </h1>
             </header><!-- .archive-header -->
 
@@ -38,9 +38,9 @@ get_header();
             rewind_posts();
             ?>
 
-            <?php if (get_the_author_meta('description')) : ?>
+            <?php if ( get_the_author_meta( 'description' ) ) : ?>
             
-                <?php get_template_part('author-bio'); ?>
+                <?php get_template_part('template-parts/author-bio'); ?>
             
             <?php endif; ?>
 
@@ -52,16 +52,16 @@ get_header();
                  * If you want to overload this in a child theme then include a file
                  * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                  */
-                get_template_part('content', get_post_format());
+                get_template_part( 'content', get_post_format() );
                 ?>
             
             <?php endwhile; ?>
 
-            <?php kebo_content_nav('nav-below'); ?>
+            <?php kebo_content_nav( 'nav-below' ); ?>
 
         <?php else : ?>
             
-            <?php get_template_part('no-results'); ?>
+            <?php get_template_part( 'no-results' ); ?>
             
         <?php endif; ?>
 

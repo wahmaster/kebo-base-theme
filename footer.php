@@ -14,7 +14,7 @@
             
             <div class="footer-content small-12 large-12 columns">
                 
-                <?php if (!is_404()) { get_sidebar('footer'); } ?>
+                <?php if ( ! is_404() ) { get_sidebar( 'footer' ); } ?>
                 
             </div>
             

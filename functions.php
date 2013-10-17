@@ -11,7 +11,7 @@
  */
 require( get_template_directory() . '/inc/jetpack.php' );
 
-if (!function_exists('kebo_setup')) :
+if ( ! function_exists( 'kebo_setup' ) ) :
 
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -30,7 +30,7 @@ if (!function_exists('kebo_setup')) :
          * replace to change 'kebo' to the name of your theme in all
          * template files.
          */
-        load_theme_textdomain('kebo', get_template_directory() . '/languages');
+        load_theme_textdomain( 'kebo', get_template_directory() . '/languages' );
         
         /**
          * Example Theme Options Page
@@ -51,7 +51,7 @@ if (!function_exists('kebo_setup')) :
          * This theme styles the visual editor to resemble the theme style,
          * specifically font, colors, and column width.
          */
-        add_editor_style('css/editor-style.css');
+        add_editor_style( 'css/editor-style.css' );
 
         /**
          * Custom template tags for this theme.
@@ -71,7 +71,7 @@ if (!function_exists('kebo_setup')) :
         /**
          * Add default posts and comments RSS feed links to head
          */
-        add_theme_support('automatic-feed-links');
+        add_theme_support( 'automatic-feed-links' );
 
         /*
          * This theme supports all available post formats.
@@ -85,9 +85,9 @@ if (!function_exists('kebo_setup')) :
         //'link', 'video'
         //));
         
-        add_theme_support('post-formats', array(
-            'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
-        ));
+        //add_theme_support( 'post-formats', array(
+            //'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
+        //));
 
         /**
          * This theme uses wp_nav_menu() in one location.
@@ -100,13 +100,13 @@ if (!function_exists('kebo_setup')) :
         /**
          * Enable support for Post Thumbnails
          */
-        add_theme_support('post-thumbnails');
+        add_theme_support( 'post-thumbnails' );
 
         /*
          * This theme uses a custom image size for featured images, displayed on
          * "standard" posts and pages.
          */
-        set_post_thumbnail_size(604, 270, true);
+        set_post_thumbnail_size( 700, 270, true );
     }
 
 endif; // kebo_setup
@@ -158,7 +158,7 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Sidebar - Shop', 'kebo'),
+        'name' => __('Footer - Left', 'kebo'),
         'id' => 'sidebar-2',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
@@ -166,7 +166,7 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Footer - Left', 'kebo'),
+        'name' => __('Footer - Center', 'kebo'),
         'id' => 'sidebar-3',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
@@ -174,24 +174,8 @@ function kebo_widgets_init() {
         'after_title' => '</h1>',
     ));
     register_sidebar(array(
-        'name' => __('Footer - Center', 'kebo'),
-        'id' => 'sidebar-4',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
-    ));
-    register_sidebar(array(
         'name' => __('Footer - Right', 'kebo'),
-        'id' => 'sidebar-5',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
-    ));
-    register_sidebar(array(
-        'name' => __('Sidebar - Forum', 'kebo'),
-        'id' => 'sidebar-6',
+        'id' => 'sidebar-4',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h1 class="widget-title">',

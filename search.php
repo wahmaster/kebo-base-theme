@@ -15,7 +15,7 @@ get_header();
         
             <?php get_template_part('no-results', 'search'); ?>
         
-        <?php elseif (have_posts()) : ?>
+        <?php elseif ( have_posts() ) : ?>
 
             <header class="page-header">
                 
@@ -24,17 +24,17 @@ get_header();
             </header><!-- .page-header -->
 
             <?php /* Start the Loop */ ?>
-            <?php while (have_posts()) : the_post(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-                <?php get_template_part('content', 'search'); ?>
+                <?php get_template_part( 'content', 'search' ); ?>
 
             <?php endwhile; ?>
 
-            <?php kebo_content_nav('nav-below'); ?>
+            <?php kebo_content_nav( 'nav-below' ); ?>
 
         <?php else : ?>
 
-            <?php get_template_part('no-results', 'search'); ?>
+            <?php get_template_part( 'no-results', 'search' ); ?>
 
         <?php endif; ?>
 
