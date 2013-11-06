@@ -85,9 +85,9 @@ if ( ! function_exists( 'kebo_setup' ) ) :
         //'link', 'video'
         //));
         
-        //add_theme_support( 'post-formats', array(
-            //'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
-        //));
+        add_theme_support( 'post-formats', array(
+            'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
+        ));
 
         /**
          * This theme uses wp_nav_menu() in one location.
@@ -276,4 +276,4 @@ add_filter('tiny_mce_before_init', 'kebo_editor_color_filter');
 /**
  * Implement the Custom Header feature
  */
-//require( get_template_directory() . '/inc/custom-header.php' );
+require( get_template_directory() . '/inc/custom-header.php' );
